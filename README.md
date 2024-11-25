@@ -6,3 +6,7 @@ https://docs.docker.com/desktop/
 #Step 2: 
 Run the below command to download and install jenkins image and run the container
 docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
+#Step 3:Get the Jenkins initial Password
+
+docker exec [Container_name] cat /var/jenkins_home/secrets/initialAdminPassword
